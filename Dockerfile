@@ -83,8 +83,8 @@ RUN \
 
 USER $ARTIFACTORY_USER_ID
 
-HEALTHCHECK --interval=5m --timeout=3s \
-  CMD curl -f http://localhost:8080/artifactory || exit 1
+#HEALTHCHECK --interval=5m --timeout=3s \
+#  CMD curl -f http://localhost:8080/artifactory || exit 1
 
 # Expose Artifactories data directory
 VOLUME ["/data/artifactory", "/data/artifactory/backup"]
